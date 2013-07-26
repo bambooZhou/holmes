@@ -9,15 +9,9 @@ import (
 )
 
 type HolmesConfig struct {
-	RedisNet       string
-	RedisIP        string
-	RedisPort      string
-	ConnectTimeout int64
-	ReadTimeout    int64
-	WriteTimeout   int64
-	BlockTimeout   int64
-	InLogDir       string
-	OutLogDir      string
+	RedisConfs []RedisConf
+	InLogDir   string
+	OutLogDir  string
 }
 
 func LoadConfig(configPath string) HolmesConfig {
